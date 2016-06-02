@@ -1,4 +1,8 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+Map<String, String> compileDependencies = rootProject.ext.dependencies;
+Map<String, String> testDependencies = rootProject.ext.testDependencies;
 
 android {
     compileSdkVersion 23
@@ -20,12 +24,64 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    // Support Libraries
+    compile compileDependencies.supportPercent
+    compile compileDependencies.supportAnnotations
+    compile compileDependencies.recyclerView
+    compile compileDependencies.appCompat
+    compile compileDependencies.cardView
+    compile compileDependencies.supportV4
+    compile compileDependencies.supportDesign
+
+    // Play Services
+    compile compileDependencies.playServicesLocation
+
+    // ButterKnife
+    compile compileDependencies.butterknife
+    apt compileDependencies.butterknifeCompiler
+
+    // Utils
+    compile compileDependencies.calligraphy
+    compile compileDependencies.prettyTime
+    compile compileDependencies.glide
+    compile compileDependencies.favor
+
+    // Dagger 2
+    compile compileDependencies.dagger2
+    provided compileDependencies.jsr250
+    apt compileDependencies.dagger2Compiler
+
+    // Retrofit and OkHttp
+    compile compileDependencies.retrofit
+    compile compileDependencies.retrofitConverterGson
+    compile compileDependencies.retrofitAdapterRxJava
+    compile compileDependencies.okhttp
+    compile compileDependencies.okhttp3LoggingInterceptor
+
+    // ReactiveX
+    compile compileDependencies.rxJava
+    compile compileDependencies.rxAndroid
+    compile compileDependencies.rxBinding
+    compile compileDependencies.rxBindingDesign
+    compile compileDependencies.rxLifecycle
+    compile compileDependencies.rxLocation
+
+    testCompile testDependencies.supportAnnotations
+    testCompile testDependencies.junit
+    testCompile testDependencies.mockito
+    testCompile testDependencies.hamcrest
+    testCompile testDependencies.junitRunner
+    testCompile testDependencies.junitRules
+    testCompile testDependencies.espresso
+    testCompile testDependencies.uiautomator
 }
 
 String getLocalProperty(String propertyName) {

@@ -1,47 +1,55 @@
 ext {
-    supportLibraryVersion = "23.1.1"
+    supportLibraryVersion = "23.3.0"
+    playServicesVersion = "8.4.0"
+    butterknifeVersion = "8.0.1"
     retrofitVersion = "2.0.0"
-    rxVersion = "1.1.0"
+    rxJavaVersion = "1.1.5"
+    rxAndroidVersion = "1.2.0"
     rxBindingVersion = "0.4.0"
     rxLifecycleVersion = "0.6.1"
+    rxLocationVersion = "0.9"
 
     dependencies = [
             /* Support Library related dependencies */
-            supportAnnotations        : "com.android.support:support-annotations:${supportLibraryVersion}",
-            recyclerView              : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
-            appCompat                 : "com.android.support:appcompat-v7:${supportLibraryVersion}",
-            cardView                  : "com.android.support:cardview-v7:${supportLibraryVersion}",
-            supportV4                 : "com.android.support:support-v4:${supportLibraryVersion}",
-            supportDesign             : "com.android.support:design:${supportLibraryVersion}",
-            supportPercent            : "com.android.support:percent:${supportLibraryVersion}",
+            supportAnnotations       : "com.android.support:support-annotations:$supportLibraryVersion",
+            recyclerView             : "com.android.support:recyclerview-v7:$supportLibraryVersion",
+            appCompat                : "com.android.support:appcompat-v7:$supportLibraryVersion",
+            cardView                 : "com.android.support:cardview-v7:$supportLibraryVersion",
+            supportV4                : "com.android.support:support-v4:$supportLibraryVersion",
+            supportDesign            : "com.android.support:design:$supportLibraryVersion",
+            supportPercent           : "com.android.support:percent:$supportLibraryVersion",
+            /* Google Play Services */
+            playServicesLocation     : "com.google.android.gms:play-services-location:$playServicesVersion",
             /* ButterKnife dependencies */
-            butterknife               : "com.jakewharton:butterknife:7.0.1",
+            butterknife              : "com.jakewharton:butterknife:$butterknifeVersion",
+            butterknifeCompiler      : "com.jakewharton:butterknife-compiler:$butterknifeVersion",
             /* Calligraphy dependencies */
-            calligraphy               : "uk.co.chrisjenx:calligraphy:2.1.0",
+            calligraphy              : "uk.co.chrisjenx:calligraphy:2.1.0",
             /* Dagger and DI related dependencies */
-            dagger2Compiler           : "com.google.dagger:dagger-compiler:2.0",
-            dagger2                   : "com.google.dagger:dagger:2.0",
-            jsr250                    : "javax.annotation:jsr250-api:1.0",
+            dagger2Compiler          : "com.google.dagger:dagger-compiler:2.0",
+            dagger2                  : "com.google.dagger:dagger:2.0",
+            jsr250                   : "javax.annotation:jsr250-api:1.0",
             /* Retrofit and OkHttp */
-            retrofit                  : "com.squareup.retrofit2:retrofit:$retrofitVersion",
-            retrofitConverterGson     : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
-            retrofitAdapterRxJava     : "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion",
-            okhttp                    : "com.squareup.okhttp3:okhttp:3.2.0",
-            okhttp3LoggingInterceptor : "com.squareup.okhttp3:logging-interceptor:3.0.1",
+            retrofit                 : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitConverterGson    : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitAdapterRxJava    : "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion",
+            okhttp                   : "com.squareup.okhttp3:okhttp:3.2.0",
+            okhttp3LoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:3.0.1",
             /* Picasso */
-            picasso                   : "com.squareup.picasso:picasso:2.5.2",
+            picasso                  : "com.squareup.picasso:picasso:2.5.2",
             /* ReactiveX */
-            rxJava                    : "io.reactivex:rxjava:$rxVersion",
-            rxAndroid                 : "io.reactivex:rxandroid:$rxVersion",
-            rxBinding                 : "com.jakewharton.rxbinding:rxbinding:$rxBindingVersion",
-            rxBindingDesign           : "com.jakewharton.rxbinding:rxbinding-design:$rxBindingVersion",
-            rxLifecycle               : "com.trello:rxlifecycle:$rxLifecycleVersion",
+            rxJava                   : "io.reactivex:rxjava:$rxJavaVersion",
+            rxAndroid                : "io.reactivex:rxandroid:$rxAndroidVersion",
+            rxBinding                : "com.jakewharton.rxbinding:rxbinding:$rxBindingVersion",
+            rxBindingDesign          : "com.jakewharton.rxbinding:rxbinding-design:$rxBindingVersion",
+            rxLifecycle              : "com.trello:rxlifecycle:$rxLifecycleVersion",
+            rxLocation               : "pl.charmas.android:android-reactive-location:$rxLocationVersion@aar",
             /* Circle Image */
-            circleImageView           : "de.hdodenhof:circleimageview:2.0.0",
+            circleImageView          : "de.hdodenhof:circleimageview:2.0.0",
             /* Glide - Gif loader */
-            glide                     : "com.github.bumptech.glide:glide:3.7.0",
-            favor                     : "com.cocosw:favor:0.2.0@aar",
-            prettyTime                : "org.ocpsoft.prettytime:prettytime:3.2.7.Final"
+            glide                    : "com.github.bumptech.glide:glide:3.7.0",
+            favor                    : "com.cocosw:favor:0.2.0@aar",
+            prettyTime               : "org.ocpsoft.prettytime:prettytime:3.2.7.Final"
     ]
 
     testDependencies = [
