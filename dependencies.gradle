@@ -1,0 +1,57 @@
+ext {
+    supportLibraryVersion = "23.1.1"
+    retrofitVersion = "2.0.0"
+    rxVersion = "1.1.0"
+    rxBindingVersion = "0.4.0"
+    rxLifecycleVersion = "0.6.1"
+
+    dependencies = [
+            /* Support Library related dependencies */
+            supportAnnotations        : "com.android.support:support-annotations:${supportLibraryVersion}",
+            recyclerView              : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            appCompat                 : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            cardView                  : "com.android.support:cardview-v7:${supportLibraryVersion}",
+            supportV4                 : "com.android.support:support-v4:${supportLibraryVersion}",
+            supportDesign             : "com.android.support:design:${supportLibraryVersion}",
+            supportPercent            : "com.android.support:percent:${supportLibraryVersion}",
+            /* ButterKnife dependencies */
+            butterknife               : "com.jakewharton:butterknife:7.0.1",
+            /* Calligraphy dependencies */
+            calligraphy               : "uk.co.chrisjenx:calligraphy:2.1.0",
+            /* Dagger and DI related dependencies */
+            dagger2Compiler           : "com.google.dagger:dagger-compiler:2.0",
+            dagger2                   : "com.google.dagger:dagger:2.0",
+            jsr250                    : "javax.annotation:jsr250-api:1.0",
+            /* Retrofit and OkHttp */
+            retrofit                  : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitConverterGson     : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitAdapterRxJava     : "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion",
+            okhttp                    : "com.squareup.okhttp3:okhttp:3.2.0",
+            okhttp3LoggingInterceptor : "com.squareup.okhttp3:logging-interceptor:3.0.1",
+            /* Picasso */
+            picasso                   : "com.squareup.picasso:picasso:2.5.2",
+            /* ReactiveX */
+            rxJava                    : "io.reactivex:rxjava:$rxVersion",
+            rxAndroid                 : "io.reactivex:rxandroid:$rxVersion",
+            rxBinding                 : "com.jakewharton.rxbinding:rxbinding:$rxBindingVersion",
+            rxBindingDesign           : "com.jakewharton.rxbinding:rxbinding-design:$rxBindingVersion",
+            rxLifecycle               : "com.trello:rxlifecycle:$rxLifecycleVersion",
+            /* Circle Image */
+            circleImageView           : "de.hdodenhof:circleimageview:2.0.0",
+            /* Glide - Gif loader */
+            glide                     : "com.github.bumptech.glide:glide:3.7.0",
+            favor                     : "com.cocosw:favor:0.2.0@aar",
+            prettyTime                : "org.ocpsoft.prettytime:prettytime:3.2.7.Final"
+    ]
+
+    testDependencies = [
+            junit             : "junit:junit:4.12",
+            mockito           : "org.mockito:mockito-core:1.10.19",
+            hamcrest          : "org.hamcrest:hamcrest-all:1.3",
+            junitRunner       : "com.android.support.test:runner:0.5",
+            junitRules        : "com.android.support.test:rules:0.5",
+            espresso          : "com.android.support.test.espresso:espresso-core:2.2.2",
+            uiautomator       : "com.android.support.test.uiautomator:uiautomator-v18:2.1.2",
+            supportAnnotations: "com.android.support:support-annotations:${supportLibraryVersion}",
+    ]
+}
