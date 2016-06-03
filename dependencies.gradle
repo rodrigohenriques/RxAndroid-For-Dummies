@@ -8,6 +8,7 @@ ext {
     rxBindingVersion = "0.4.0"
     rxLifecycleVersion = "0.6.1"
     rxLocationVersion = "0.9"
+    rxPreferencesVersion = "1.0.1"
 
     dependencies = [
             /* Support Library related dependencies */
@@ -45,6 +46,7 @@ ext {
             rxLifecycle              : "com.trello:rxlifecycle:$rxLifecycleVersion",
             rxLifecycleComponents    : "com.trello:rxlifecycle-components:$rxLifecycleVersion",
             rxLocation               : "pl.charmas.android:android-reactive-location:$rxLocationVersion@aar",
+            rxPreferences            : "com.f2prateek.rx.preferences:rx-preferences:$rxPreferencesVersion",
             /* Circle Image */
             circleImageView          : "de.hdodenhof:circleimageview:2.0.0",
             /* Glide - Gif loader */

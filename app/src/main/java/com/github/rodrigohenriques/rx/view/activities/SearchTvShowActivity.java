@@ -18,6 +18,7 @@ import com.github.rodrigohenriques.rx.model.QueryResult;
 import com.github.rodrigohenriques.rx.view.adapter.DividerItemDecoration;
 import com.github.rodrigohenriques.rx.view.adapter.EpisodeAdapter;
 import com.jakewharton.rxbinding.view.RxView;
+import com.jakewharton.rxbinding.widget.RxTextView;
 
 import javax.inject.Inject;
 
@@ -47,11 +48,19 @@ public class SearchTvShowActivity extends BaseActivity {
 
         ButterKnife.bind(this);
 
+        RxTextView.textChanges(editTextTvShow)
+                .compose(bindToLifecycle())
+                .subscribe(this::toastChange, this::handleError);
+
         RxView.clicks(buttonQuery)
                 .compose(bindToLifecycle())
                 .map(this::createQueryRequest)
                 .filter(QueryRequest::isValid)
                 .subscribe(this::performQuery);
+    }
+
+    private void toastChange(CharSequence charSequence) {
+        Snackbar.make(recyclerView, "Text Changed: " + charSequence, Snackbar.LENGTH_SHORT).show();
     }
 
     private QueryRequest createQueryRequest(Void aVoid) {

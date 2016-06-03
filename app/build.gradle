@@ -74,6 +74,7 @@ dependencies {
     compile compileDependencies.rxLifecycle
     compile compileDependencies.rxLifecycleComponents
     compile compileDependencies.rxLocation
+    compile compileDependencies.rxPreferences
 
     testCompile testDependencies.supportAnnotations
     testCompile testDependencies.junit
