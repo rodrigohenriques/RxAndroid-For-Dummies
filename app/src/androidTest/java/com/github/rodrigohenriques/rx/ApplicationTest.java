@@ -1,4 +1,4 @@
-package com.github.rodrigohenriques.rxmarvel;
+package com.github.rodrigohenriques.rx;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

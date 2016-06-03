@@ -1,4 +1,4 @@
-package com.github.rodrigohenriques.rxmarvel;
+package com.github.rodrigohenriques.rx;
 
 import org.junit.Test;
 

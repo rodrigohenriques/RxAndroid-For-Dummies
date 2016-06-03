@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">RxMarvel</string>
+    <string name="app_name">RxAndroid for Dummies</string>
+    <string name="location_sample">Location Sample</string>
+    <string name="http_request_sample">HTTP Request Sample</string>
+    <string name="hint_tv_show">Tv Show</string>
+    <string name="hint_season">Season</string>
+    <string name="action_query">Search</string>
+    <string name="title_query">Http Request Sample</string>
+    <string name="title_location">Location Sample</string>
 </resources>

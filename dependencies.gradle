@@ -43,6 +43,7 @@ ext {
             rxBinding                : "com.jakewharton.rxbinding:rxbinding:$rxBindingVersion",
             rxBindingDesign          : "com.jakewharton.rxbinding:rxbinding-design:$rxBindingVersion",
             rxLifecycle              : "com.trello:rxlifecycle:$rxLifecycleVersion",
+            rxLifecycleComponents    : "com.trello:rxlifecycle-components:$rxLifecycleVersion",
             rxLocation               : "pl.charmas.android:android-reactive-location:$rxLocationVersion@aar",
             /* Circle Image */
             circleImageView          : "de.hdodenhof:circleimageview:2.0.0",
